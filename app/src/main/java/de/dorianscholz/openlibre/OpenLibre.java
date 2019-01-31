@@ -75,7 +75,7 @@ public class OpenLibre extends Application {
 
         parseRawData();
 
-        StethoUtils.install(this, openLibreDataPath);
+        // StethoUtils.install( this, openLibreDataPath);
     }
 
     public static void refreshApplicationSettings(SharedPreferences settings) {

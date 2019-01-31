@@ -77,7 +77,6 @@ object ExportTask {
                         Realm.getInstance(realmConfigProcessedData).use { realm ->
                             exportEntries<GlucoseData>("glucose-data", outputFormat, realm,
                                     realm.where(GlucoseData::class.java)
-                                            .equalTo(GlucoseData.IS_TREND_DATA, false)
                                             .findAllSorted(GlucoseData.DATE, Sort.ASCENDING))
                         }
                 }

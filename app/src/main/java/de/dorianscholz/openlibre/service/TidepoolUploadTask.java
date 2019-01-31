@@ -113,7 +113,6 @@ class TidepoolUploadTask extends AsyncTask<Void, Void, Boolean> {
 
             // find data that has not be uploaded yet
             List<GlucoseData> newGlucoseData = realmProcessedData.where(GlucoseData.class).
-                    equalTo(GlucoseData.IS_TREND_DATA, false).
                     greaterThan(GlucoseData.DATE, tidepoolUploadTimestamp).
                     findAllSorted(GlucoseData.DATE, Sort.ASCENDING);
 

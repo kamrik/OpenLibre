@@ -245,6 +245,10 @@ public class MainActivity extends AppCompatActivity implements LogFragment.OnSca
 
         } else if (id == R.id.action_debug_cont_nfc_reading) {
             mContinuousSensorReadingFlag = !mContinuousSensorReadingFlag;
+            Toast.makeText(this,
+                    String.format("Set continuous NFC read to %b", mContinuousSensorReadingFlag),
+                    Toast.LENGTH_SHORT
+            ).show();
             return true;
 
         } else if (id == R.id.action_debug_clear_plot) {
